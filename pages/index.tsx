@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
+import { theme } from "../styles/theme";
 
 export default function Home() {
   return (
@@ -9,4 +10,6 @@ export default function Home() {
     </Wrapper>
   );
 }
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  color: ${({ theme }) => theme.color.green};
+`;
