@@ -3,17 +3,19 @@ import Head from "next/head";
 import { GlobalStyle } from "../styles/global-style";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../styles/theme";
+import Header from "../components/nav/header";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>MOVIE APP</title>
-        <meta name="description" content="next와 함께하는 movie-app" />
+        <title>next-javascript</title>
+        <meta name="description" content="next movie-app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <Header/>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
